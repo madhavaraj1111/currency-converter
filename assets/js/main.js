@@ -1,7 +1,4 @@
 const currencies = `https://api.frankfurter.app/currencies`;
-const nameData = await fetch(currencies);
-const jsonData = await nameData.json();
-const arrayForm = Object.entries(jsonData);
 
 const selectEl1 = document.querySelectorAll("#currency")[0];
 const selectEl2 = document.querySelectorAll("#currency")[1];
@@ -14,7 +11,10 @@ const convertedCurrency = document.getElementById("convertedCurrency");
 const conversionResult = document.getElementById("conversionResult");
 const convertForm = document.getElementById("convertForm");
 
-const iterate = (selectEl) => {
+const iterate = async (selectEl) => {
+  const nameData = await fetch(currencies);
+  const jsonData = await nameData.json();
+  const arrayForm = Object.entries(jsonData);
   arrayForm.map((value) => {
     const optionEl = document.createElement("option");
     optionEl.innerText = value[0];
