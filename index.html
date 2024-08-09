@@ -3,15 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency convertor</title>
+    <title>Currency converter</title>
 
     <!-- TailwindCSS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-  <body>
+  <body class="bg-outerspace font-poppins">
     <!-- Write your HTML here -->
-    <div id="app" class="text-3xl font-bold bg-red-500 text-white p-10">
-      Working
+
+    <div
+      class="bg-white p-2 sm:px-20 sm:py-10 m-20 my-5 rounded max-w-xl mx-auto"
+    >
+      <h2 class="bg-blue-500 text-white p-3 rounded mb-3">
+        Currency converter
+      </h2>
+
+      <form class="border-2 border-gray-600 p-2 sm:p-5 mx-auto rounded">
+        <div
+          class="bg-blue-100 rounded flex p-4 items-center justify-center gap-5 sm:gap-3"
+        >
+          <div class="flex items-center w-fit">
+            <label for="currency" class="pr-1">From</label>
+            <select
+              name=""
+              id="currency"
+              class="sm:w-32 py-1 sm:py-2 px-5 bg-gray-700 text-white rounded outline-none cursor-pointer"
+            >
+              <option value="INR" class="">INR</option>
+            </select>
+          </div>
+          <div class="flex items-center w-fit">
+            <label for="currency" class="pr-1">To</label
+            ><select
+              name=""
+              id="currency"
+              class="sm:w-32 py-1 sm:py-2 px-5 bg-gray-700 text-white rounded outline-none cursor-pointer"
+            >
+              <option value="INR" class="">INR</option>
+            </select>
+          </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-center my-10">
+          <label for="inputvalue" class="pr-3">Amount :</label>
+          <input
+            type="text"
+            id="=inputvalue"
+            class="px-3 py-1 sm:px-5 sm:py-2 bg-gray-200 rounded outline-none"
+            placeholder="Enter Amount"
+          />
+        </div>
+        <button
+          class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 w-full"
+        >
+          Convert
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <h4
+        class="font-extralight text-2xl rounded text-center tracking-wide bg-white max-w-xl p-10 mx-auto"
+      >
+        84 INR = 1 USD
+      </h4>
     </div>
     <script type="module" src="./assets/js/main.js"></script>
   </body>
